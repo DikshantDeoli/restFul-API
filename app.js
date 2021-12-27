@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"))
 
 // connection to the mongo Url 
-mongoose.connect("mongodb://localhost:27017/wikiDB", { useNewUrlParser: true }, (err) => {
+mongoose.connect("mongodb+srv://root:root@cluster0.kdlnd.mongodb.net/wikiDB?retryWrites=true&w=majority", { useNewUrlParser: true }, (err) => {
     if (!err) {
         console.log("Connected To DataBase")
     } else {
